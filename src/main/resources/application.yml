@@ -1,0 +1,18 @@
+server:
+  port: 8081  # Adjust if needed
+
+spring:
+  application:
+    name: Client # Replace with your actual application name
+  # Consider removing `allow-bean-definition-overriding` unless necessary
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka  # Adjust if your Eureka server is at a different location
+
+  instance:
+    preferIpAddress: true  # Adjust if needed based on your environment
+
